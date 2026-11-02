@@ -1,0 +1,83 @@
+:root{
+  --orange:#ff6a13;
+  --orange-dark:#c2410c;
+  --ink:#1a1a1a;
+  --dark:#25252a;
+  --cream:#fdfaf4;
+  --sand:#e0ded7;
+  --serif:'Noto Serif',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --pad:clamp(24px,5.5vw,80px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);line-height:1.5}
+h1,h2,h3,p{margin:0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.2}
+section{padding:96px var(--pad)}
+.btn{display:inline-block;background:var(--orange);color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 24px;min-height:44px;transition:background .2s}
+.btn:hover,.btn:focus-visible{background:#ff8340}
+.btn--wide{padding:14px 40px;margin-top:40px}
+
+/* Portada */
+.hero{min-height:810px;display:flex;align-items:flex-start;background:linear-gradient(135deg,#d9d9db 0%,#8d8d92 35%,#2b2b30 100%);padding-top:64px;padding-bottom:64px}
+.hero__card{background:rgba(250,248,243,.94);padding:48px 52px;max-width:600px}
+.logo{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.12em}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3vw,40px);line-height:1.25;text-transform:uppercase;margin:40px 0 48px}
+.hero p{font-size:16px;line-height:1.7}
+.hero .btn{margin-top:24px}
+
+/* Equipo */
+.team{background:var(--dark);color:#f4f1ea}
+.team h2{margin-bottom:56px}
+.team__grid{display:flex;flex-wrap:wrap;gap:32px}
+.person{flex:1 1 220px;min-width:200px;padding-bottom:20px;border-bottom:1px solid var(--orange)}
+.person__photo{aspect-ratio:1/1;background:linear-gradient(160deg,#6b6b70,#3a3a3f);display:flex;align-items:center;justify-content:center;color:#d8d8dc;font-family:var(--serif);font-size:56px;overflow:hidden}
+.person__photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.person h3{font-family:var(--serif);font-weight:400;font-size:22px;margin-top:20px}
+.person p{color:var(--orange);font-size:15px;margin-top:8px}
+
+/* Ventajas */
+.advantage{background:var(--cream);display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start}
+.advantage h2{flex:1 1 360px}
+.advantage__list{flex:1 1 420px;display:flex;flex-direction:column;gap:48px}
+.adv{display:flex;gap:24px;align-items:flex-start}
+.adv svg{flex:none}
+.adv h3{color:var(--orange-dark);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+.adv p{margin-top:10px;color:#3a3a3f;font-size:15px;line-height:1.6}
+
+/* Especialidades */
+.specialties{background:var(--sand);display:flex;flex-wrap:wrap;gap:64px;align-items:center}
+.specialties__img{flex:1 1 360px;max-width:560px;aspect-ratio:1/1;background:linear-gradient(150deg,#8d8d92,#3a3a3f);display:flex;align-items:center;justify-content:center;color:#e8e6df;font-family:var(--serif);font-size:20px;text-align:center;padding:24px;overflow:hidden}
+.specialties__img img{width:100%;height:100%;object-fit:cover}
+.specialties__text{flex:1 1 400px}
+.specialties h2{font-size:32px;padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid var(--orange-dark)}
+.specialties p,.specialties ul{font-size:16px;line-height:1.7;color:#2b2b30}
+.specialties p{margin-bottom:16px}
+.specialties ul{margin:0;padding-left:24px}
+
+/* Reseñas */
+.reviews{background:var(--dark);color:#f4f1ea}
+.reviews h2{text-align:center;font-size:clamp(28px,2.8vw,40px)}
+.reviews__tag{text-align:center;color:var(--orange);font-weight:700;font-size:14px;letter-spacing:.04em;margin:24px 0 80px}
+.reviews__grid{display:flex;flex-wrap:wrap;gap:48px}
+blockquote{flex:1 1 280px;min-width:260px;margin:0}
+blockquote p{color:#e8e6df;font-size:15px;line-height:1.6}
+cite{display:block;font-style:normal;color:var(--orange);font-weight:600;font-size:16px;margin-top:48px}
+
+/* Contacto */
+.contact{min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:linear-gradient(160deg,#8d8d92 0%,#3a3a3f 45%,#16161a 100%);outline:none}
+.contact h2{font-size:clamp(34px,3.6vw,52px);margin-bottom:64px}
+.contact__info{display:flex;flex-wrap:wrap;gap:48px;font-size:17px;line-height:1.6}
+.contact__info>*{flex:0 1 380px}
+.contact address{font-style:normal}
+.contact address p+p{margin-top:24px}
+.contact a{color:#fff;text-decoration:none}
+.contact a:hover{text-decoration:underline}
+.contact a.btn{color:var(--ink);align-self:flex-start;text-decoration:none}
+
+@media (max-width:640px){
+  section{padding-top:64px;padding-bottom:64px}
+  .hero__card{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
